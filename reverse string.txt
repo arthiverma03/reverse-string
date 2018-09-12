@@ -21,7 +21,6 @@ process.stdin.on('end', _ => {
 function readLine() {
     return inputString[currentLine++];
 }
-
 /*
  * Complete the reverseString function
  * Use console.log() to print to stdout.
@@ -29,10 +28,13 @@ function readLine() {
 function reverseString(s) {
     var returnValue;
    try{
-       var splitstring = s.split("");
+       var splitstring = s.split('');
         var reverseArray = splitstring.reverse();
-        var joinArray = reverseArray.join("");
-       returnValue = Number(joinArray);
+        var joinArray = reverseArray.join('');
+       if(typeof joinArray === 'number')
+        returnValue = Number(joinArray);
+       else
+          returnValue = joinArray; 
  console.log(returnValue);
    }
     catch(error){
@@ -41,4 +43,10 @@ function reverseString(s) {
        
     }
     return returnValue;
+}
+
+function main() {
+    const s = eval(readLine());
+    
+    reverseString(s);
 }
