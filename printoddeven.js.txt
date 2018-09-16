@@ -1,0 +1,4 @@
+function modifyArray(nums) {
+    var arthi = nums.map(n => n = (n%2===0) ? n*2 : n*3)
+    return arthi;
+}

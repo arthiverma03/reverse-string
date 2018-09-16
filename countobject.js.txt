@@ -1,0 +1,9 @@
+function getCount(objects) {
+    var count = 0;
+    objects.map(r => {
+        if(r.x === r.y)
+            count++;
+    })
+    return count;
+    
+}
